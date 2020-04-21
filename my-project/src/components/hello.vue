@@ -1,8 +1,14 @@
 <template>
-    <div>
+    <div ref="hello">
         <h1>this is a first page!</h1>
         <h2>{{message}}</h2>
         <h2>{{hobbies}}</h2>
+        <!-- {{2+3}}
+    {{2*3}}
+    {{23%3}}
+    {{6>7?6:7}}
+    {{isShow?true:false}}
+    {{message.split('').reverse().join('')}} -->
         <button @click="sayhello">sayhello</button>
         <button @click="changemessage('赵泉钰学习vue')">changemessage</button>
     </div>
@@ -12,7 +18,8 @@ export default {
   data () {
     return {
       message: 'dkdlek',
-      hobbies: ['爬山', '跑步', '竞走']
+      hobbies: ['爬山', '跑步', '竞走'],
+      isShow: false
     }
   },
   methods: {
@@ -21,7 +28,20 @@ export default {
     },
     changemessage: function (newMessage) {
       this.message = newMessage
-      console.log(this.message)
+      // console.log(this.message)
+      // console.log(this.$el)
+      // $el关联的dom元素
+      // console.log(this.$data['message'])
+      // 获取data下面的message数据
+      // console.log(this.$options)
+      // 获取所有自定义的
+      // console.log(this.$options['methods']['changemessage'])
+      // console.log(this.$options['methods'].changemessage)
+      // 获取自定义的属性
+      // console.log(this.$refs.hello)
+      // 获取页面中所有包含ref属性的dom元素
+      console.log(this.$parent)// 获取父节点
+      console.log(this.$children)// 获取子节点
     }
   }
 }
