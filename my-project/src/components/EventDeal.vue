@@ -9,6 +9,10 @@
       <div class="b"></div>
     </div>
     <input type="text" v-on:keyup='submit'>
+    <hr>
+    <button @click="getId">getquery</button>
+    <button @click="getParams">getParams</button>
+    <button @click="getZh">getZh</button>
 </div>
 </template>
 
@@ -32,6 +36,15 @@ export default {
     },
     submit: function (e) {
       alert(e.keyCode)
+    },
+    getId: function () {
+      console.log(this.$route.query)
+    },
+    getParams: function () {
+      console.log(this.$route.params)
+    },
+    getZh: function () {
+      console.log(this.$route.params)
     }
   },
   // 生命周期 - 创建完成（访问当前this实例）
