@@ -5,6 +5,9 @@ import shopping from '@/components/Shopping'
 import parent from '@/components/ParentComponent'
 import a from '@/components/A'
 import vuexDemo from '@/components/vuexDemo'
+import vueDemo2 from '@/components/vueDemo2'
+import testDemo from '@/components/testDemo'
+import users from '@/components/users'
 
 Vue.use(Router)
 
@@ -34,6 +37,21 @@ export default new Router({
       path: '/vuexDemo',
       name: 'vuexDemo',
       component: vuexDemo
+    },
+    {
+      path: '/vueDemo2',
+      name: 'vueDemo2',
+      component: vueDemo2
+    },
+    {
+      path: '/testDemo',
+      name: 'testDemo',
+      component: testDemo
+    },
+    {
+      path: '/users',
+      name: 'users',
+      component: users
     }
   ]
 })
